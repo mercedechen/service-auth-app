@@ -34,38 +34,38 @@
 
       <div class="checkbox">
         <label for="all">
-          <input type="checkbox"> All
+          <input type="checkbox" id="all"> All
         </label>
         <label for="mon">
-          <input type="checkbox"> Mon
+          <input type="checkbox" id="mon" onchange="countSelectDays()"> Mon
         </label>
         <label for="tue">
-          <input type="checkbox"> Tue
+          <input type="checkbox" id="tue" onchange="countSelectDays()"> Tue
         </label>
         <label for="wed">
-          <input type="checkbox"> Wed
+          <input type="checkbox" id="wed" onchange="countSelectDays()"> Wed
         </label>
         <label for="thu">
-          <input type="checkbox"> Thu
+          <input type="checkbox" id="thu" onchange="countSelectDays()"> Thu
         </label>
         <label for="fri">
-          <input type="checkbox"> Fri
+          <input type="checkbox" id="fri" onchange="countSelectDays()"> Fri
         </label>
         <label for="sat">
-          <input type="checkbox"> Sat
+          <input type="checkbox" id="sat" onchange="countSelectDays()"> Sat
         </label>
         <label for="sun">
-          <input type="checkbox"> Sun
+          <input type="checkbox" id="sun" onchange="countSelectDays()"> Sun
         </label>
       </div>
 
       <div id="results">
-        <p id="selectDays">Days Selected</p>
+        <p id="selectDayText">Days Selected <span id="selectDays"></span></p>
         <label>Approved Hours
-          <input>
+          <input type="number">
         </label>
-        <p>Total Hours</p>
-        <p>Total Units</p>
+        <p id="totalHours">Total Hours</p>
+        <p id="totalUnits">Total Units</p>
       </div>
     </form>
   </div>
