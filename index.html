@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Authorization Calculator</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <h1>Service Authorization Calculator</h1>
+
+  <div id="pcw-form" class="form-container">
+    <form>
+        <label for="selectForm">Service Type
+          <select id="selectForm">
+            <option>PCW</option>
+            <option>CDPAS</option>
+            <option>SDC</option>
+          </select>
+        </label>
+
+      <div class="container">
+        <label for="startDate">Start Date
+          <input type="date" id="startDate">
+        </label>
+        <label for="endDate">End Date
+          <input type="date" id="endDate">
+        </label>
+        <label for="totalDays">Total Days
+          <span id="totalDays"></span>
+        </label>
+      </div>
+
+      <div class="checkbox">
+        <label for="all">
+          <input type="checkbox"> All
+        </label>
+        <label for="mon">
+          <input type="checkbox"> Mon
+        </label>
+        <label for="tue">
+          <input type="checkbox"> Tue
+        </label>
+        <label for="wed">
+          <input type="checkbox"> Wed
+        </label>
+        <label for="thu">
+          <input type="checkbox"> Thu
+        </label>
+        <label for="fri">
+          <input type="checkbox"> Fri
+        </label>
+        <label for="sat">
+          <input type="checkbox"> Sat
+        </label>
+        <label for="sun">
+          <input type="checkbox"> Sun
+        </label>
+      </div>
+
+      <div id="results">
+        <p id="selectDays">Days Selected</p>
+        <label>Approved Hours
+          <input>
+        </label>
+        <p>Total Hours</p>
+        <p>Total Units</p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
