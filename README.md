@@ -23,3 +23,20 @@ The purpose of this app is to improve efficiency in procedural workflows by accu
 8. "Total Hours" calculates the number of days selected by the amount of approved hours and returns the result
 
 9. "Total Units" calculates the total approved hours and converts it to units at a set rate of 1 hr = 4 units and returns the result
+
+### Notes
+Count the number of days between two (2) dates:
+1. Dates default format is strings and JavaScript will require converting to objects to manipulate
+2. Dates are in mm/dd/yyyy hh:mm:ss:ms format, remove time by using .setHours(0,0,0,0)
+3. Use Math.round(), ((end date value - start date value)/(1000 * 60 * 60 * 24)) +1, to include start date
+* 1000 ms = 1s
+* 60s = 1m
+* 60m = 1h
+* 24h = 1d
+4. Results renders to HTML ("Total Days" element)
+5. If there are no start/end date input, "Total Days" remains at 0
+
+Checkbox for "All" should account for all 7 days of the week:
+1. If "All" is checked, then "Days Selected" renders 7
+2. If "All" is not checked, then "Days Selected" renders 0
+3. If "All is checked, disable single day checkboxes

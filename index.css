@@ -1,68 +1,128 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12pt;
   background-color: #D9D9D9;
   color: #3A3B3C;
-  margin: 0 auto;
+  margin: 0;
+}
+
+body, h2 {
+  font-size: 12pt;
+  font-weight: 400;
 }
 
 h1 {
   background-color: #FFFFFF;
-  margin: 0;
   font-size: 14pt;
   font-weight: 600;
-  padding-top: 25px;
-  padding-bottom: 15px;
   text-align: center;
+  margin: 0;
+  padding: 25px 0 15px 0;
 }
 
-form {
+/* service selection */
+#service, form {
   margin: 50px auto;
   width: 60%;
 }
+
+#service {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+#service:hover #serviceList {
+  display: block;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  text-align: left;
+  margin-left: 25px;
+  padding: 10px 15px;
+  font-size: 12pt;
+  font-weight: 600;
+  width: 100px;
+}
+
+#serviceList {
+  display: none;
+  background-color: #FFFFFF;
+  margin-left: 25px;
+  width: 100px;
+  position: absolute;
+}
+
+#serviceList a {
+  display: block;
+  color: #3A3B3C;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+#serviceList a:hover {
+  background-color: #3A3B3C;
+  color: #FFFFFF;
+}
+
+.form {
+  display: none;
+}
+
 
 .container {
   margin: 50px 0;
 }
 
-select, input, span {
+select, input {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   font-weight: 600;
   color: #3A3B3C;
   border: none;
   margin-left: 25px;
+}
+
+select, input {
   padding: 10px 15px;
 }
 
-#selectForm {
-  height: 40px;
+p {
+  display: inline;
+}
+
+#selectService {
   margin: auto 25px;
 }
 
 .container input {
   margin-right: 50px;
-  height: 20px;
 }
 
-.checkbox input {
-  margin-right: 8px;
+#checkbox input {
+  margin-right: 10px;
 }
 
 #results {
   margin-top: 50px;
 }
 
-#results span {
-  margin-left: 40px;
+td {
+  padding-right: 50px;
+  padding-bottom: 20px;
 }
 
 #approvedHours {
-  height: 20px;
+  height: 15px;
   width: 100px;
+  margin: 0;
 }
 
 footer {
   text-align: center;
   font-size: 8pt;
+  font-style: italic;
 }
