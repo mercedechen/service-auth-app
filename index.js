@@ -1,19 +1,29 @@
 const button = document.getElementById("button");
 const serviceList = document.getElementById("serviceList");
-const form = document.querySelector(".form");
-
-// text in dropdown hover menu changes based on selection
-serviceList.addEventListener("click", (event) => {
-  button.textContent = event.target.textContent;
-});
-
-
+const forms = document.querySelectorAll("form");
 const inputStartDate = document.getElementById("startDate");
 const inputEndDate = document.getElementById("endDate");
 const totalDays = document.getElementById("totalDays");
 const checkAll = document.getElementById("all");
 const box = document.getElementsByName("box.name");
 const checked = document.getElementById("box.id");
+
+// text in dropdown hover menu changes based on selection
+serviceList.addEventListener("click", (event) => {
+  button.textContent = event.target.textContent;
+});
+
+function showForm(serviceType) {
+  // hide all forms
+  for (let i = 0; i < forms.length; i++) {
+    forms[i].style.display = "none";
+  };
+  // show selected form
+  const selectedForm = document.getElementById(serviceType + "Form");
+  if (selectedForm) {
+    selectedForm.style.display = "block";
+  };
+};
 
 const calculateTotalDays = () => {
   // converts strings to obj

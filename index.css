@@ -61,6 +61,7 @@ button {
   color: #3A3B3C;
   text-decoration: none;
   padding: 10px 15px;
+  text-transform: uppercase;
 }
 
 #serviceList a:hover {
@@ -68,16 +69,15 @@ button {
   color: #FFFFFF;
 }
 
-.form {
+/* form {
   display: none;
+} */
+
+#startDate, #endDate {
+  margin-right: 50px;
 }
 
-
-.container {
-  margin: 50px 0;
-}
-
-select, input {
+input, span {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   font-weight: 600;
@@ -86,23 +86,19 @@ select, input {
   margin-left: 25px;
 }
 
-select, input {
+input {
   padding: 10px 15px;
 }
 
 p {
-  display: inline;
+  display: inline-block;
 }
 
-#selectService {
-  margin: auto 25px;
+#checkboxes {
+  margin-top: 45px;
 }
 
-.container input {
-  margin-right: 50px;
-}
-
-#checkbox input {
+#checkboxes input {
   margin-right: 10px;
 }
 
@@ -119,6 +115,7 @@ td {
   height: 15px;
   width: 100px;
   margin: 0;
+  padding: 10px 25px;
 }
 
 footer {

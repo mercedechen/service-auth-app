@@ -15,76 +15,95 @@
     <div>
       <button id="button">Select</button>
       <div id="serviceList">
-        <a href="#pcw">PCW</a>
-        <a href="#cdpas">CDPAS</a>
+        <a href="#pcw" onclick="showForm('pcw')">PCW</a>
+        <a href="#cdpas" onclick="showForm('cdpas')">CDPAS</a>
         <a href="#sdc">SDC</a>
       </div>
     </div>
   </div>
 
-  <form class="form">
-    <h2>PCW</h2>
-    <div class="container">
-      <label for="startDate">Start Date
-        <input type="date" id="startDate">
-      </label>
-      <label for="endDate">End Date
-        <input type="date" id="endDate">
-      </label>
-      <p for="totalDays">Total Days
-        <span id="totalDays">0</span>
-      </p>
-    </div>
+  <form id="pcwForm" class="serviceForm">
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate">
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate">
+    <p for="totalDays">Total Days</p>
+    <span id="totalDays">0</span>
 
-    <div id="checkbox">
-      <label for="all">
-        <input type="checkbox" id="all" class="checkbox" onchange="selectAllDays()"> All
+    <div id="checkboxes">
+      <label for="allDays">
+        <input type="checkbox" id="allDays" onchange="selectAllDays()"> All
       </label>
+
       <label for="mon">
-        <input type="checkbox" id="mon" name="box"onchange="countSelectDays()"> Mon
+        <input type="checkbox" id="mon" onchange="countSelectDays()"> Mon
       </label>
+
       <label for="tue">
-        <input type="checkbox" id="tue" name="box" onchange="countSelectDays()"> Tue
+        <input type="checkbox" id="tue" onchange="countSelectDays()"> Tue
       </label>
+
       <label for="wed">
-        <input type="checkbox" id="wed" name="box" onchange="countSelectDays()"> Wed
+        <input type="checkbox" id="wed" onchange="countSelectDays()"> Wed
       </label>
+
       <label for="thu">
-        <input type="checkbox" id="thu" name="box" onchange="countSelectDays()"> Thu
+        <input type="checkbox" id="thu" onchange="countSelectDays()"> Thu
       </label>
+
       <label for="fri">
-        <input type="checkbox" id="fri" name="box" onchange="countSelectDays()"> Fri
+        <input type="checkbox" id="fri" onchange="countSelectDays()"> Fri
       </label>
+
       <label for="sat">
-        <input type="checkbox" id="sat" name="box" onchange="countSelectDays()"> Sat
+        <input type="checkbox" id="sat" onchange="countSelectDays()"> Sat
       </label>
+
       <label for="sun">
-        <input type="checkbox" id="sun" name="box" onchange="countSelectDays()"> Sun
+        <input type="checkbox" id="sun" onchange="countSelectDays()"> Sun
       </label>
     </div>
 
     <table id="results">
       <tr>
         <td id="selectDayText">Days Selected</td>
-        <td><span id="selectDays">0</span></td>
+        <td>
+          <span id="selectDays">0</span>
+        </td>
       </tr>
       <tr>
-        <td><label for="approvedHours">Approved Hours</label></td>
-        <td><input type="number" id="approvedHours"></td>
+        <td>
+          <label for="approvedHours">Approved Hours</label>
+        </td>
+        <td>
+          <input type="number" id="approvedHours">
+        </td>
       </tr>
       <tr>
         <td id="totalHours">Total Hours</td>
-        <td><span>0</span></td>
+        <td>
+          <span>0</span>
+        </td>
       </tr>
       <tr>
         <td id="totalUnits">Total Units</td>
-        <td><span>0</span></td>
+        <td>
+          <span>0</span>
+        </td>
       </tr>
     </table>
   </form>
 
-  <!-- <footer>
+  <form id="cdpasForm" class="serviceForm">
+    
+  </form>
+
+  <form id="sdcForm" class="serviceForm">
+
+  </form>
+
+  <footer>
     2024 Free for personal use. Work-In-Progress.
-  </footer> -->
+  </footer>
 </body>
 </html>
